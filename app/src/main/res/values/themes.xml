@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.To02_PMDM_Navia_JuanManuel" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.To02_PMDM_Navia_JuanManuel" parent="Base.Theme.To02_PMDM_Navia_JuanManuel" />
+    <style name="Base.Theme.Adapter_Recycles" parent="Theme.Material3.DayNight.NoActionBar">
+    </style>
+
+    <style name="Theme.ConversorDeMoneda" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#6200EE</item> <!-- Fondo de la barra -->
+        <item name="colorOnPrimary">#FFFFFF</item> <!-- Color del texto -->
+    </style>
+    <style name="Theme.Adapter_Recycles" parent="Base.Theme.Adapter_Recycles" />
+</resources>
