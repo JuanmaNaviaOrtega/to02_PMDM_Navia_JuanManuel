@@ -15,3 +15,8 @@ un Swipe up
 Esta aplicacion consta de una Pantalla inicial que carga una lista de sitioesWebs sobre herramientas de inteligencia artificial desde un array o una fuente de datos, tambien tiene un RecyclerView que muestra la lista en tarjetas.
 Tiene un evento al pulsar que seleccionará el sitioWeb pulsado y sera comunicado a la actividad principal para abrir el fragmento de detalle con los datos del sitio web.
 La pantalla detalle como ya he dicho muestra toda la información sobre el sitioWeb seleccionado, esto incluye su nombre, link, descripcion, email, imagen.
+He añadido las siguientes funcionalidades:
+-Abrir la url para cuando se pulse el botón nos mande a la pagina de la herramienta de inteligencia artificial.
+-Un boton para eliminar el sitioWeb que no queremos que aparezcá
+-Un boton para añadir un nuevo sitioWeb
+-Si pulsamos en el email del administrador nos mandará a la aplicación gmail para poder mandar un correo.

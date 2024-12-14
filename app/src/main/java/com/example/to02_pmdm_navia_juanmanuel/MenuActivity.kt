@@ -10,7 +10,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.to02_pmdm_navia_juanmanuel.primeraApp.primeraApp
 import com.example.to02_pmdm_navia_juanmanuel.segundaApp.MainActivity
 import com.example.to02_pmdm_navia_juanmanuel.terceraApp.Interfaces.MainActivity3
-import com.example.to02_pmdm_navia_juanmanuel.R
 
 class MenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
