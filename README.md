@@ -1,6 +1,6 @@
 #Primera Aplicacion.
 Esta aplicación convierte entre euros y dólares, cuando se pasa un valor como parametro elegiremos a traves de dos radio boton si queremos convertir de euros a dólares o de dólares a euros y automaticamnente nos da el resultado.
-La mejora que he hecho en esta aplicación es poner un unico editText editable que valga para euros y dólares y cuando se pulse cualquier radioboton haga el cambio de moneda automaticamente en un editText no editable llamado resultado, gracias a esto he podido quitar el botón convertir y tener una aplicacion mejor optimiziada
+La mejora que he hecho en esta aplicación es poner un unico editText editable que valga para euros y dólares y cuando se pulse cualquier radioboton haga el cambio de moneda automaticamente en un editText no editable, también gracias a esto he podido quitar el botón convertir
 
 #Segunda Aplicacion.
 Esta aplicación tiene una array que contiene la información de los sitios webs sobre herramientas de inteligencia artificial para programadores, cada sitio web contiene un nombre,link,descripción,email del administrador y una imagen.
@@ -12,6 +12,11 @@ un boton x arriba a la derecha del cardView para poder eliminar un sitioWeb del 
 un Swipe up
 
 #Tercera Aplicacion
-Esta aplicacion consta de una Pantalla inicial que carga una lista de sitioesWebs sobre herramientas de inteligencia artificial desde un array o una fuente de datos, tambien tiene un RecyclerView que muestra la lista en tarjetas (cardView).
-Tiene un evento al pulsar el sitio web que queremos seleccionar,  este será comunicado a la actividad principal para abrir el fragmento de detalle con los datos del sitio web.
+Esta aplicacion consta de una Pantalla inicial que carga una lista de sitioesWebs sobre herramientas de inteligencia artificial desde un array o una fuente de datos, tambien tiene un RecyclerView que muestra la lista en tarjetas.
+Tiene un evento al pulsar que seleccionará el sitioWeb pulsado y sera comunicado a la actividad principal para abrir el fragmento de detalle con los datos del sitio web.
 La pantalla detalle como ya he dicho muestra toda la información sobre el sitioWeb seleccionado, esto incluye su nombre, link, descripcion, email, imagen.
+He añadido las siguientes funcionalidades:
+-Abrir la url para cuando se pulse el botón nos mande a la pagina de la herramienta de inteligencia artificial.
+-Un boton para eliminar el sitioWeb que no queremos que aparezcá
+-Un boton para añadir un nuevo sitioWeb
+-Si pulsamos en el email del administrador nos mandará a la aplicación gmail para poder mandar un correo. 
