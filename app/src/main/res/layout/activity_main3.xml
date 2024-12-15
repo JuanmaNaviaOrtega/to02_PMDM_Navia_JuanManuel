@@ -9,14 +9,14 @@
 
     <!-- Contenedor para el RecyclerView -->
     <LinearLayout
-        android:layout_width="0dp"
+        android:layout_width="50dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:orientation="vertical">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
-            android:layout_width="match_parent"
+            android:layout_width="155dp"
             android:layout_height="0dp"
             android:layout_margin="8dp"
             android:layout_weight="1"
@@ -27,19 +27,21 @@
     <!-- Contenedor para el Fragment -->
     <FrameLayout
         android:id="@+id/fragmentContainer"
-        android:layout_width="0dp"
+        android:layout_width="163dp"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:layout_margin="8dp" />
+        android:layout_margin="8dp"
+        android:layout_weight="1">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            android:contentDescription="@string/add_task_description"
+            android:src="@android:drawable/ic_input_add" />
+    </FrameLayout>
 
     <!--FloatingActionButton (colocado dentro del LinearLayout) -->
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabAdd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="16dp"
-        android:src="@android:drawable/ic_input_add"
-        android:contentDescription="@string/add_task_description" />
 
 </LinearLayout>

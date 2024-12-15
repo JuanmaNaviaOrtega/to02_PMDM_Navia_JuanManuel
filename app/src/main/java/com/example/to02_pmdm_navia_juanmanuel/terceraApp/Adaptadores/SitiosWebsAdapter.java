@@ -66,7 +66,7 @@ binding.imagenDetalleid.setImageResource(tarea.getImagenId());
     }
 
 
-    // Interfaz para manejar clics en tareas
+    // Interfaz para manejar clics en las tareas
     public interface OnTareaClickListener {
         void onTareaClick(Tarea tarea);
     }

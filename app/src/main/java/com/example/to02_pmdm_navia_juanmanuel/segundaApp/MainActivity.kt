@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
     private fun onItemSelected(sitioWebs: sitiosWebs) {
         Toast.makeText(
             this,
-            "Descripción: ${sitioWebs.description}\nEmail: ${sitioWebs.email}",
+            "${sitioWebs.description}\nEmail: ${sitioWebs.email}",
             Toast.LENGTH_LONG
         ).show()
     }

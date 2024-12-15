@@ -45,17 +45,16 @@ public class MainActivity3 extends AppCompatActivity implements iComunicaFragmen
                 position -> confirmarEliminacion(position));
         binding.recyclerView.setAdapter(adapter);
 
-        // Configurar FloatingActionButton para agregar tareas
+        // Configurar FloatingActionButton para agregar las tareas
         binding.fabAdd.setOnClickListener(v -> mostrarDialogoAgregarTarea());
     }
 
-    /**
-     * Método para mostrar detalles de una tarea seleccionada.
-     */
+
+      // Método para mostrar los  detalles de una tarea que seleccionemos
+
     private void mostrarDetalles(Tarea tarea) {
         DetalleFragment detalleFragment = new DetalleFragment();
 
-        // Pasar datos a través de un Bundle
         Bundle bundle = new Bundle();
         bundle.putSerializable("tarea", tarea);
         detalleFragment.setArguments(bundle);
@@ -69,9 +68,9 @@ public class MainActivity3 extends AppCompatActivity implements iComunicaFragmen
     }
 
 
-        /**
-         * Método para confirmar la eliminación de una tarea.
-         */
+
+         // Método para confirmar la eliminación de una tarea que seleccionemos
+
     private void confirmarEliminacion(int position) {
         new AlertDialog.Builder(this)
                 .setTitle("Eliminar Tarea")
@@ -84,18 +83,17 @@ public class MainActivity3 extends AppCompatActivity implements iComunicaFragmen
                 .show();
     }
 
-    /**
-     * Método para mostrar el diálogo de agregar una nueva tarea.
-     */
+
+     //Método para  agregar una nueva tarea
+
     private void mostrarDialogoAgregarTarea() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Agregar Nueva Tarea");
 
-        // Crear un diseño simple para el diálogo (opcionalmente usa un diseño XML)
         builder.setMessage("Ingresa una nueva tarea");
 
         builder.setPositiveButton("Agregar", (dialog, which) -> {
-            // Agregar una tarea de ejemplo
+            // Agregar una tarea
            tareas.add(new Tarea("Notion AI", R.drawable.notionn,"https://www.notion.so" , " Asistente para organización y productividad que usa IA para notas, planificación y generación de texto", "support@makenotion.com"));
             adapter.notifyItemInserted(tareas.size() - 1);
         });
@@ -104,9 +102,8 @@ public class MainActivity3 extends AppCompatActivity implements iComunicaFragmen
         builder.show();
     }
 
-    /**
-     * Método de la interfaz iComunicaFragments para recibir tareas desde los fragmentos.
-     */
+
+     //Método de la interfaz iComunicaFragments para recibir las tareas desde los fragmentos.
     @Override
     public void enviarTarea(Tarea tarea) {
         mostrarDetalles(tarea);

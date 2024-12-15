@@ -24,7 +24,7 @@ public class DetalleFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = FragmentDetalleSitioswebBinding.inflate(inflater, container, false);
 
-        // Obtener la tarea del Bundle
+
         if (getArguments() != null) {
             tarea = (Tarea) getArguments().getSerializable("tarea"); // Clave "tarea"
 
@@ -37,7 +37,7 @@ public class DetalleFragment extends Fragment {
             }
         }
 
-        // Configurar el botón para abrir la URL
+        // Configuracion del botón para abrir la URL de la pagina web
         binding.btnAbrirUrl.setOnClickListener(v -> {
             if (tarea != null && tarea.getUrl() != null && !tarea.getUrl().isEmpty()) {
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(tarea.getUrl()));
@@ -46,20 +46,16 @@ public class DetalleFragment extends Fragment {
 
 
         });
-        // Configurar el TextView del email para que sea clickable
+        // Configurar el TextView del emailAdministrador para que sea clickable y nos mande a la aplicación para mandar el correo electronico
         binding.tvEmail.setOnClickListener(v -> {
             if (tarea != null && tarea.getEmailAdministrador() != null && !tarea.getEmailAdministrador().isEmpty()) {
-                // Crear un Intent paraenviar un correo electrónico
                 Intent intent = new Intent(Intent.ACTION_SENDTO);
                 intent.setData(Uri.parse("mailto:" + tarea.getEmailAdministrador())); // Usar la dirección de email de la tarea
-                //intent.putExtra(Intent.EXTRA_SUBJECT, "Asunto del correo"); // Opcional: agregar un asunto
-                //intent.putExtra(Intent.EXTRA_TEXT, "Cuerpo del correo"); // Opcional: agregar un cuerpo
 
-                // Iniciar la actividad de correo electrónico
                 startActivity(Intent.createChooser(intent, "Enviar correo electrónico"));
             }
         });
-        return binding.getRoot(); // Devolver la vista raíz del binding
+        return binding.getRoot();
     }
 
     @Override
